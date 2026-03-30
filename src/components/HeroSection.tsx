@@ -53,7 +53,7 @@ const HeroSection = () => {
             transition={{ delay: 0.8, duration: 0.5 }}
             className="absolute bottom-0 right-4 sm:right-8 text-xs text-muted-foreground/70 max-w-[220px] text-right"
           >
-            Escola Politècnica Superior – Universitat de Girona, la nostra casa
+            Escola Politècnica Superior – Universitat de Girona, "On tot va nèixer"
           </motion.p>
         </div>
       </section>
