@@ -32,38 +32,54 @@ const tech = [
 const ProjectSection = () => (
   <section id="projecte" className="py-28 bg-section-alt">
     <div className="container">
-      <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-        {/* Text */}
-        <motion.div {...fadeUp}>
-          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">El projecte</p>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold mb-6">
-            Una mà protèsica funcional
-          </h2>
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
-            <p>
-              Construir un braç robòtic funcional implica integrar múltiples disciplines en un sol dispositiu. Tot comença amb la <strong className="text-foreground">lectura de senyals electromiogràfics (EMG)</strong> del cos de l'usuari, que es processen per interpretar la intenció de moviment.
-            </p>
-            <p>
-              A partir d'aquí, els <strong className="text-foreground">algorismes de control</strong> tradueixen aquests senyals en ordres precises per als actuadors. El <strong className="text-foreground">disseny electrònic</strong> inclou la creació de PCBs personalitzats, gestió d'energia i comunicació entre components.
-            </p>
-            <p>
-              Finalment, el <strong className="text-foreground">disseny mecànic</strong> defineix l'estructura, les articulacions i els mecanismes d'agafada, prototipats amb impressió 3D per aconseguir una mà lleugera, resistent i adaptada a l'usuari.
-            </p>
-          </div>
-        </motion.div>
-
-        {/* 3D Hand */}
-        <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.15 }}>
-          <Suspense
-            fallback={
-              <div className="w-full h-[400px] sm:h-[450px] rounded-xl bg-muted/30 border flex items-center justify-center">
-                <div className="text-sm text-muted-foreground animate-pulse">Carregant model 3D…</div>
-              </div>
-            }
-          >
+      {/* Hero block: 3D hand as background, text overlay */}
+      <div className="relative rounded-2xl overflow-hidden mb-16 min-h-[550px] sm:min-h-[600px]">
+        {/* 3D background */}
+        <div className="absolute inset-0 opacity-25 pointer-events-auto">
+          <Suspense fallback={null}>
             <RoboticHand3D />
           </Suspense>
-        </motion.div>
+        </div>
+
+        {/* Text content on top */}
+        <div className="relative z-10 px-6 sm:px-10 py-12 sm:py-16">
+          <motion.div {...fadeUp}>
+            <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">El projecte</p>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold mb-8">
+              Una mà protèsica funcional
+            </h2>
+          </motion.div>
+
+          <motion.div
+            {...fadeUp}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="space-y-5 max-w-2xl text-[0.95rem] leading-[1.75] text-muted-foreground"
+          >
+            <p>
+              El desenvolupament d'un braç robòtic funcional requereix la integració coordinada de diverses disciplines d'enginyeria dins d'un únic sistema.
+            </p>
+            <p>
+              El procés s'inicia amb la captació de senyals electromiogràfics (EMG) de l'usuari, que són condicionats i processats per extreure'n patrons d'activació muscular i inferir la intenció de moviment.
+            </p>
+            <p>
+              Aquests senyals són interpretats mitjançant algorismes de control, que generen ordres precises per als actuadors, permetent un moviment controlat i coherent de la pròtesi.
+            </p>
+            <p>
+              A nivell electrònic, el sistema incorpora el disseny de plaques de circuit imprès (PCB) específiques, així com la gestió de l'alimentació i la comunicació entre els diferents mòduls del dispositiu.
+            </p>
+            <p>
+              Pel que fa al disseny mecànic, es defineixen l'arquitectura estructural, les articulacions i els mecanismes d'accionament, amb especial atenció a la funcionalitat, el pes i l'ergonomia. Els components es prototipen mitjançant tecnologies d'impressió 3D per tal d'optimitzar la iteració i l'adaptació a l'usuari final.
+            </p>
+          </motion.div>
+
+          <motion.p
+            {...fadeUp}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-6 text-xs text-muted-foreground/60 italic"
+          >
+            Arrossega el fons per rotar la mà 3D
+          </motion.p>
+        </div>
       </div>
 
       {/* Tech cards */}
