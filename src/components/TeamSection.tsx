@@ -80,11 +80,21 @@ const TeamSection = () => (
       </motion.div>
 
       {/* Equip */}
-      <motion.div {...fadeUp}>
+      <motion.div {...fadeUp} className="mb-14">
         <h3 className="font-display font-semibold text-lg mb-8 text-muted-foreground">Equip</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10">
           {team.map((m, i) => (
             <MemberCard key={m.name} member={m} delay={i * 0.03} />
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Col·laboradors */}
+      <motion.div {...fadeUp}>
+        <h3 className="font-display font-semibold text-lg mb-8 text-muted-foreground">Col·laboradors</h3>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-10">
+          {collaborators.map((m, i) => (
+            <MemberCard key={m.name} member={m} delay={i * 0.05} />
           ))}
         </div>
       </motion.div>
