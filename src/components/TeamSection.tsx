@@ -13,7 +13,7 @@ interface Member {
 }
 
 const coordinators: Member[] = [
-  { name: "Dani Trias", role: "Professor coordinador", contribution: "Supervisió tècnica i acadèmica", image: daniImg },
+  { name: "Dani Trias", role: "Professor coordinador", image: daniImg },
   { name: "Joan Andreu Mayugo", role: "Professor coordinador", image: joanImg },
 ];
 
