@@ -33,12 +33,9 @@ const ContactSection = () => {
         <div className="max-w-xl mx-auto">
           <motion.div {...fadeUp} className="text-center mb-10">
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Contacte</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
-              Parlem?
+            <h2 className="font-display text-3xl sm:text-4xl font-bold">
+              Posa't en contacte
             </h2>
-            <p className="text-muted-foreground">
-              Si vols col·laborar, tens preguntes o simplement vols saber-ne més, escriu-nos.
-            </p>
           </motion.div>
 
           <motion.form
@@ -69,14 +66,6 @@ const ContactSection = () => {
             </Button>
           </motion.form>
 
-          <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }} className="text-center mt-8">
-            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-              <Mail className="w-4 h-4" />
-              <a href="mailto:magironica@udg.edu" className="hover:text-primary transition-colors underline underline-offset-2">
-                magironica@udg.edu
-              </a>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
