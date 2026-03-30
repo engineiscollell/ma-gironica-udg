@@ -66,14 +66,6 @@ const ContactSection = () => {
             </Button>
           </motion.form>
 
-          <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.2 }} className="text-center mt-8">
-            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-              <Mail className="w-4 h-4" />
-              <a href="mailto:magironica@udg.edu" className="hover:text-primary transition-colors underline underline-offset-2">
-                magironica@udg.edu
-              </a>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
