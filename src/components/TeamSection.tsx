@@ -18,16 +18,16 @@ const coordinators: Member[] = [
 ];
 
 const team: Member[] = [
-  { name: "Eira", role: "Enginyeria Electrònica", contribution: "Disseny electrònic" },
-  { name: "Eloi", role: "Enginyeria Biomèdica", contribution: "Senyals biomèdics" },
-  { name: "Laia Moreno", role: "Enginyeria Mecànica", contribution: "Disseny mecànic" },
-  { name: "Lluís Francesc Collell", role: "Enginyeria Biomèdica", contribution: "Integració biomèdica", image: lluisImg },
-  { name: "Luis", role: "Enginyeria Industrial", contribution: "Processos industrials" },
-  { name: "Miquel Coll", role: "Enginyeria Informàtica", contribution: "Desenvolupament software" },
-  { name: "Noa Pararol", role: "Enginyeria Mecànica", contribution: "Prototipat 3D" },
-  { name: "Pau Grabulosa", role: "Enginyeria Industrial", contribution: "Gestió tècnica" },
-  { name: "Pol Verdaguer", role: "Enginyeria Industrial", contribution: "Anàlisi i producció" },
-  { name: "Sònia Carrasco", role: "Enginyeria Biomèdica", contribution: "Recerca biomèdica" },
+  { name: "Eira", role: "Enginyeria Electrònica" },
+  { name: "Eloi", role: "Enginyeria Biomèdica" },
+  { name: "Laia Moreno", role: "Enginyeria Mecànica" },
+  { name: "Lluís Francesc Collell", role: "Enginyeria Biomèdica", image: lluisImg },
+  { name: "Luis", role: "Enginyeria Industrial" },
+  { name: "Miquel Coll", role: "Enginyeria Informàtica" },
+  { name: "Noa Pararol", role: "Enginyeria Mecànica" },
+  { name: "Pau Grabulosa", role: "Enginyeria Industrial" },
+  { name: "Pol Verdaguer", role: "Enginyeria Industrial" },
+  { name: "Sònia Carrasco", role: "Enginyeria Biomèdica" },
 ];
 
 const fadeUp = {
