@@ -32,14 +32,14 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
-              Som un equip d'estudiants d'enginyeria de la Universitat de Girona desenvolupant una pròtesi robòtica funcional per participar en la competició nacional de mans protèsiques a València.
+              Som un equip d'estudiants d'enginyeria de la Universitat de Girona desenvolupant un braç robòtic per a participar a la <em>"II COMPETICIÓN UNIVERSITARIA DE MANOS PROTÉSICAS"</em>.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-12">
               <Button size="lg" onClick={() => scrollTo("#projecte")}>
                 Veure projecte
               </Button>
-              <Button size="lg" variant="outline" className="bg-background/60 backdrop-blur-sm" onClick={() => scrollTo("#contacte")}>
+              <Button size="lg" variant="outline" className="bg-background/60 backdrop-blur-sm" onClick={() => scrollTo("#sponsors")}>
                 <Heart className="w-4 h-4 mr-2" />
                 Col·labora amb nosaltres
               </Button>
@@ -51,9 +51,11 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.5 }}
-            className="absolute bottom-0 right-4 sm:right-8 text-xs text-muted-foreground/70 max-w-[220px] text-right"
+            className="absolute bottom-0 right-4 sm:right-8 text-xs text-muted-foreground/70 text-right"
           >
-            Escola Politècnica Superior – Universitat de Girona, "On tot va nèixer"
+            Escola Politècnica Superior – Universitat de Girona
+            <br />
+            <span className="italic">"On tot va nèixer"</span>
           </motion.p>
         </div>
       </section>
