@@ -34,15 +34,15 @@ const ProjectSection = () => (
     <div className="container">
       {/* Hero block: 3D hand as background, text overlay */}
       <div className="relative rounded-2xl overflow-hidden mb-16 min-h-[550px] sm:min-h-[600px]">
-        {/* 3D background */}
-        <div className="absolute inset-0 opacity-25 pointer-events-auto">
+        {/* 3D background – interactive */}
+        <div className="absolute inset-0 opacity-20 z-0">
           <Suspense fallback={null}>
             <RoboticHand3D />
           </Suspense>
         </div>
 
-        {/* Text content on top */}
-        <div className="relative z-10 px-6 sm:px-10 py-12 sm:py-16">
+        {/* Text content – pointer-events-none so 3D is draggable through it */}
+        <div className="relative z-10 px-6 sm:px-10 py-12 sm:py-16 pointer-events-none">
           <motion.div {...fadeUp}>
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">El projecte</p>
             <h2 className="font-display text-3xl sm:text-4xl font-bold mb-8">
@@ -53,9 +53,9 @@ const ProjectSection = () => (
           <motion.div
             {...fadeUp}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="space-y-5 max-w-2xl text-[0.95rem] leading-[1.75] text-muted-foreground"
+            className="space-y-6 max-w-2xl text-base sm:text-lg leading-[1.85] text-foreground/85"
           >
-            <p>
+            <p className="first-letter:text-2xl first-letter:font-display first-letter:font-bold first-letter:text-primary first-letter:mr-0.5">
               El desenvolupament d'un braç robòtic funcional requereix la integració coordinada de diverses disciplines d'enginyeria dins d'un únic sistema.
             </p>
             <p>
@@ -75,9 +75,9 @@ const ProjectSection = () => (
           <motion.p
             {...fadeUp}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-6 text-xs text-muted-foreground/60 italic"
+            className="mt-8 text-xs text-muted-foreground/50 italic tracking-wide"
           >
-            Arrossega el fons per rotar la mà 3D
+            ↔ Arrossega per rotar la mà 3D
           </motion.p>
         </div>
       </div>
