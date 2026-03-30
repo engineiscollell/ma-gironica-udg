@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Eye, HeartHandshake, Lightbulb, DollarSign, Package, Wrench, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -29,13 +29,14 @@ const slides = [
 ];
 
 const how = [
-  { icon: DollarSign, title: "Aportació econòmica", desc: "Finançament per materials, viatges i inscripció a la competició." },
-  { icon: Package, title: "Subministrament de materials", desc: "Components electrònics, materials d'impressió 3D o eines." },
-  { icon: Wrench, title: "Suport tècnic o assessorament", desc: "Coneixement especialitzat en mecànica, electrònica o biomèdica." },
+  { icon: DollarSign, title: "Aportació econòmica", desc: "Finançament per cobrir costos de materials, components, viatges i inscripció a la competició universitària. Cada aportació ens acosta a fer realitat una pròtesi funcional i accessible." },
+  { icon: Package, title: "Subministrament de materials", desc: "Components electrònics, sensors, actuadors, materials d'impressió 3D, eines de taller o qualsevol recurs físic que faciliti el desenvolupament i prototipatge del braç robòtic." },
+  { icon: Wrench, title: "Suport tècnic o assessorament", desc: "Coneixement especialitzat en mecànica, electrònica, biomèdica o fabricació. L'experiència de professionals del sector ens ajuda a prendre millors decisions tècniques." },
 ];
 
 const SponsorsSection = () => {
   const [current, setCurrent] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
 
   const next = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
   const prev = useCallback(() => setCurrent((c) => (c - 1 + slides.length) % slides.length), []);
@@ -116,23 +117,46 @@ const SponsorsSection = () => {
         {/* Com col·laborar */}
         <motion.div {...fadeUp}>
           <h3 className="font-display font-semibold text-lg mb-6">Com col·laborar?</h3>
-          <div className="grid sm:grid-cols-3 gap-6 mb-10">
-            {how.map((h, i) => (
-              <motion.div
-                key={h.title}
-                {...fadeUp}
-                transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="flex gap-4 items-start"
-              >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex-shrink-0 flex items-center justify-center">
-                  <h.icon className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-display font-semibold text-sm mb-0.5">{h.title}</h4>
-                  <p className="text-sm text-muted-foreground">{h.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+          <div className="grid gap-4 mb-10">
+            {how.map((h, i) => {
+              const Icon = h.icon;
+              const isActive = activeTab === i;
+              return (
+                <motion.button
+                  key={h.title}
+                  {...fadeUp}
+                  transition={{ duration: 0.4, delay: i * 0.1 }}
+                  onClick={() => setActiveTab(isActive ? -1 : i)}
+                  className={`text-left rounded-xl border p-6 transition-all ${
+                    isActive
+                      ? "bg-primary/5 border-primary/30 shadow-soft"
+                      : "bg-card border-border shadow-card hover:border-primary/20"
+                  }`}
+                >
+                  <div className="flex items-center gap-4">
+                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center transition-colors ${
+                      isActive ? "bg-primary/15" : "bg-primary/10"
+                    }`}>
+                      <Icon className={`w-6 h-6 ${isActive ? "text-primary" : "text-primary/70"}`} />
+                    </div>
+                    <h4 className="font-display font-semibold text-lg">{h.title}</h4>
+                  </div>
+                  <AnimatePresence>
+                    {isActive && (
+                      <motion.p
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-muted-foreground leading-relaxed mt-4 ml-16 text-base"
+                      >
+                        {h.desc}
+                      </motion.p>
+                    )}
+                  </AnimatePresence>
+                </motion.button>
+              );
+            })}
           </div>
 
           <Button
