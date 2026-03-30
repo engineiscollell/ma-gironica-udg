@@ -3,6 +3,7 @@ import { User } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import daniImg from "@/assets/dani.jpeg";
 import lluisImg from "@/assets/lluis.jpeg";
+import joanImg from "@/assets/joan.jpeg";
 
 interface Member {
   name: string;
@@ -12,21 +13,21 @@ interface Member {
 }
 
 const coordinators: Member[] = [
-  { name: "Dani Trias", role: "Professor coordinador", contribution: "Supervisió tècnica i acadèmica", image: daniImg },
-  { name: "Joan Andreu Mayugo", role: "Professor coordinador", contribution: "Coordinació general del projecte" },
+  { name: "Dani Trias", role: "Professor coordinador", image: daniImg },
+  { name: "Joan Andreu Mayugo", role: "Professor coordinador", image: joanImg },
 ];
 
 const team: Member[] = [
-  { name: "Eira", role: "Enginyeria Electrònica", contribution: "Disseny electrònic" },
-  { name: "Eloi", role: "Enginyeria Biomèdica", contribution: "Senyals biomèdics" },
-  { name: "Laia Moreno", role: "Enginyeria Mecànica", contribution: "Disseny mecànic" },
-  { name: "Lluís Francesc Collell", role: "Enginyeria Biomèdica", contribution: "Integració biomèdica", image: lluisImg },
-  { name: "Luis", role: "Enginyeria Industrial", contribution: "Processos industrials" },
-  { name: "Miquel Coll", role: "Enginyeria Informàtica", contribution: "Desenvolupament software" },
-  { name: "Noa Pararol", role: "Enginyeria Mecànica", contribution: "Prototipat 3D" },
-  { name: "Pau Grabulosa", role: "Enginyeria Industrial", contribution: "Gestió tècnica" },
-  { name: "Pol Verdaguer", role: "Enginyeria Industrial", contribution: "Anàlisi i producció" },
-  { name: "Sònia Carrasco", role: "Enginyeria Biomèdica", contribution: "Recerca biomèdica" },
+  { name: "Eira", role: "Enginyeria Electrònica" },
+  { name: "Eloi", role: "Enginyeria Biomèdica" },
+  { name: "Laia Moreno", role: "Enginyeria Mecànica" },
+  { name: "Lluís Francesc Collell", role: "Enginyeria Biomèdica", image: lluisImg },
+  { name: "Luis", role: "Enginyeria Industrial" },
+  { name: "Miquel Coll", role: "Enginyeria Informàtica" },
+  { name: "Noa Pararol", role: "Enginyeria Mecànica" },
+  { name: "Pau Grabulosa", role: "Enginyeria Industrial" },
+  { name: "Pol Verdaguer", role: "Enginyeria Industrial" },
+  { name: "Sònia Carrasco", role: "Enginyeria Biomèdica" },
 ];
 
 const fadeUp = {
@@ -52,9 +53,6 @@ const MemberCard = ({ member, delay = 0 }: { member: Member; delay?: number }) =
     </Avatar>
     <p className="font-display font-semibold text-sm">{member.name}</p>
     <p className="text-xs text-muted-foreground mt-0.5">{member.role}</p>
-    {member.contribution && (
-      <p className="text-xs text-muted-foreground/70 mt-1 italic">{member.contribution}</p>
-    )}
   </motion.div>
 );
 
@@ -65,7 +63,7 @@ const TeamSection = () => (
         <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">L'equip</p>
         <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">Qui som</h2>
         <p className="text-muted-foreground leading-relaxed">
-          Un equip multidisciplinari d'estudiants de la Universitat de Girona, guiats per professors amb experiència en enginyeria i recerca.
+          Un equip multidisciplinari d'estudiants d'enginyeria la Universitat de Girona, guiats per professors amb experiència en enginyeria i recerca.
         </p>
       </motion.div>
 
