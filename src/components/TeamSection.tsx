@@ -53,9 +53,6 @@ const MemberCard = ({ member, delay = 0 }: { member: Member; delay?: number }) =
     </Avatar>
     <p className="font-display font-semibold text-sm">{member.name}</p>
     <p className="text-xs text-muted-foreground mt-0.5">{member.role}</p>
-    {member.contribution && (
-      <p className="text-xs text-muted-foreground/70 mt-1 italic">{member.contribution}</p>
-    )}
   </motion.div>
 );
 
