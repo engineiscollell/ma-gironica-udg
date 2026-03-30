@@ -9,7 +9,7 @@ const fadeUp = {
 };
 
 const CarinaSection = () => (
-  <section id="carina" className="py-24 bg-section-alt">
+  <section id="carina" className="py-28 bg-section-alt">
     <div className="container">
       <div className="max-w-3xl mx-auto">
         <motion.div {...fadeUp} className="text-center mb-10">
@@ -28,13 +28,10 @@ const CarinaSection = () => (
           className="bg-card rounded-xl p-8 shadow-card border"
         >
           <p className="text-muted-foreground leading-relaxed mb-4">
-            La Carina és treballadora de la ONCE i va perdre la mà el 2011 en un accident laboral. 
-            Des d'aleshores, ha après a adaptar-se a la seva nova realitat, però moltes tasques 
-            quotidianes segueixen sent un repte.
+            Aquest projecte neix amb un objectiu molt concret: desenvolupar una solució funcional per a la Carina.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Aquest projecte neix amb l'objectiu concret d'ajudar-la. Desenvolupem una pròtesi 
-            funcional que li permeti recuperar autonomia i millorar la seva qualitat de vida.
+            La Carina, treballadora de la ONCE, va perdre la mà l'any 2011 en un accident laboral. A partir d'aquesta realitat, treballem per crear una pròtesi que pugui millorar la seva autonomia i qualitat de vida.
           </p>
           <p className="text-foreground font-medium">
             No és un exercici acadèmic: és un compromís real amb una persona real.
