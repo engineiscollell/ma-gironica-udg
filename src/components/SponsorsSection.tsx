@@ -29,9 +29,9 @@ const slides = [
 ];
 
 const how = [
-  { icon: DollarSign, title: "Aportació econòmica", desc: "Finançament per materials, viatges i inscripció a la competició." },
-  { icon: Package, title: "Subministrament de materials", desc: "Components electrònics, materials d'impressió 3D o eines." },
-  { icon: Wrench, title: "Suport tècnic o assessorament", desc: "Coneixement especialitzat en mecànica, electrònica o biomèdica." },
+  { icon: DollarSign, title: "Aportació econòmica", desc: "Finançament per cobrir costos de materials, components, viatges i inscripció a la competició universitària. Cada aportació ens acosta a fer realitat una pròtesi funcional i accessible." },
+  { icon: Package, title: "Subministrament de materials", desc: "Components electrònics, sensors, actuadors, materials d'impressió 3D, eines de taller o qualsevol recurs físic que faciliti el desenvolupament i prototipatge del braç robòtic." },
+  { icon: Wrench, title: "Suport tècnic o assessorament", desc: "Coneixement especialitzat en mecànica, electrònica, biomèdica o fabricació. L'experiència de professionals del sector ens ajuda a prendre millors decisions tècniques." },
 ];
 
 const SponsorsSection = () => {
