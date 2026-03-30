@@ -10,32 +10,30 @@ const fadeUp = {
 };
 
 const why = [
-  { icon: Eye, title: "Visibilitat", desc: "Presència a la competició nacional, web i xarxes socials del projecte." },
-  { icon: HeartHandshake, title: "Impacte social", desc: "Col·labora directament en un projecte que millora la vida d'una persona." },
-  { icon: Lightbulb, title: "Innovació real", desc: "Participa en un projecte tecnològic multidisciplinari amb aplicació directa." },
+  { icon: Eye, title: "Visibilitat", desc: "Visibilitat com a entitat compromesa amb la innovació." },
+  { icon: Lightbulb, title: "Projecte real", desc: "Participació en un projecte universitari real amb aplicació directa." },
+  { icon: HeartHandshake, title: "Impacte social", desc: "Impacte social directe en la vida d'una persona." },
 ];
 
 const how = [
-  { icon: DollarSign, title: "Econòmic", desc: "Finançament per materials, viatges i inscripció a la competició." },
-  { icon: Package, title: "Material", desc: "Components electrònics, materials d'impressió 3D o eines." },
+  { icon: DollarSign, title: "Aportació econòmica", desc: "Finançament per materials, viatges i inscripció a la competició." },
+  { icon: Package, title: "Subministrament de materials", desc: "Components electrònics, materials d'impressió 3D o eines." },
   { icon: Wrench, title: "Assessorament tècnic", desc: "Coneixement especialitzat en mecànica, electrònica o biomèdica." },
 ];
 
 const SponsorsSection = () => (
-  <section id="sponsors" className="py-24">
+  <section id="sponsors" className="py-28">
     <div className="container">
-      <motion.div {...fadeUp} className="max-w-2xl mb-16">
+      <motion.div {...fadeUp} className="max-w-2xl mb-14">
         <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Sponsors</p>
         <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
           Busquem qui ens acompanyi
         </h2>
         <p className="text-muted-foreground leading-relaxed">
-          Actualment comptem amb la col·laboració de la ONCE. Busquem nous sponsors que vulguin 
-          formar part d'un projecte amb impacte social i tecnològic real.
+          Actualment comptem amb el suport de la ONCE, i estem oberts a noves col·laboracions.
         </p>
       </motion.div>
 
-      {/* Per què col·laborar */}
       <motion.div {...fadeUp} className="mb-16">
         <h3 className="font-display font-semibold text-lg mb-6">Per què col·laborar?</h3>
         <div className="grid sm:grid-cols-3 gap-6">
@@ -54,7 +52,6 @@ const SponsorsSection = () => (
         </div>
       </motion.div>
 
-      {/* Com col·laborar */}
       <motion.div {...fadeUp}>
         <h3 className="font-display font-semibold text-lg mb-6">Com col·laborar?</h3>
         <div className="grid sm:grid-cols-3 gap-6 mb-10">
