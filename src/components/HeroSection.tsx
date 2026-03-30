@@ -39,7 +39,7 @@ const HeroSection = () => {
               <Button size="lg" onClick={() => scrollTo("#projecte")}>
                 Veure projecte
               </Button>
-              <Button size="lg" variant="outline" className="bg-background/60 backdrop-blur-sm" onClick={() => scrollTo("#contacte")}>
+              <Button size="lg" variant="outline" className="bg-background/60 backdrop-blur-sm" onClick={() => scrollTo("#sponsors")}>
                 <Heart className="w-4 h-4 mr-2" />
                 Col·labora amb nosaltres
               </Button>
