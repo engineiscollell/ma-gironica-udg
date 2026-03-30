@@ -25,7 +25,7 @@ const team: Member[] = [
   { name: "Laia Moreno", role: "Enginyeria Mecànica" },
   { name: "Lluís Francesc Collell", role: "Enginyeria Biomèdica", image: lluisImg },
   { name: "Luis", role: "Enginyeria Industrial" },
-  { name: "Miquel Coll", role: "Enginyeria Informàtica" },
+  { name: "Miquel Coll", role: "Enginyeria Informàtica", image: miquelImg },
   { name: "Noa Pararol", role: "Enginyeria Mecànica" },
   { name: "Pau Grabulosa", role: "Enginyeria Industrial" },
   { name: "Pol Verdaguer", role: "Enginyeria Industrial" },
