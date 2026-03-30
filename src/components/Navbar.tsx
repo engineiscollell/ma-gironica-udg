@@ -38,7 +38,7 @@ const Navbar = () => {
               {l.label}
             </button>
           ))}
-          <Button size="sm" className="ml-3" onClick={() => scrollTo("#contacte")}>
+          <Button size="sm" className="ml-3" onClick={() => scrollTo("#sponsors")}>
             Col·labora
           </Button>
         </div>
