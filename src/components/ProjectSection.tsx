@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
-import { Cog, Cpu, Code, Target, Map, Users } from "lucide-react";
+import { Cog, Cpu, Code } from "lucide-react";
+import { lazy, Suspense } from "react";
+
+const RoboticHand3D = lazy(() => import("./RoboticHand3D"));
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -7,24 +10,6 @@ const fadeUp = {
   viewport: { once: true, margin: "-60px" },
   transition: { duration: 0.5 },
 };
-
-const pillars = [
-  {
-    icon: Target,
-    title: "Objectiu",
-    desc: "Desenvolupar una pròtesi robòtica funcional adaptada a una necessitat real.",
-  },
-  {
-    icon: Map,
-    title: "Context",
-    desc: "El projecte es desenvolupa en el marc d'una competició nacional de mans protèsiques a València.",
-  },
-  {
-    icon: Users,
-    title: "Enfocament",
-    desc: "Equip multidisciplinari que combina enginyeria mecànica, electrònica i informàtica.",
-  },
-];
 
 const tech = [
   {
@@ -47,31 +32,38 @@ const tech = [
 const ProjectSection = () => (
   <section id="projecte" className="py-28 bg-section-alt">
     <div className="container">
-      <motion.div {...fadeUp} className="max-w-2xl mb-14">
-        <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">El projecte</p>
-        <h2 className="font-display text-3xl sm:text-4xl font-bold">
-          Una mà protèsica funcional
-        </h2>
-      </motion.div>
+      <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        {/* Text */}
+        <motion.div {...fadeUp}>
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">El projecte</p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold mb-6">
+            Una mà protèsica funcional
+          </h2>
+          <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              Construir un braç robòtic funcional implica integrar múltiples disciplines en un sol dispositiu. Tot comença amb la <strong className="text-foreground">lectura de senyals electromiogràfics (EMG)</strong> del cos de l'usuari, que es processen per interpretar la intenció de moviment.
+            </p>
+            <p>
+              A partir d'aquí, els <strong className="text-foreground">algorismes de control</strong> tradueixen aquests senyals en ordres precises per als actuadors. El <strong className="text-foreground">disseny electrònic</strong> inclou la creació de PCBs personalitzats, gestió d'energia i comunicació entre components.
+            </p>
+            <p>
+              Finalment, el <strong className="text-foreground">disseny mecànic</strong> defineix l'estructura, les articulacions i els mecanismes d'agafada, prototipats amb impressió 3D per aconseguir una mà lleugera, resistent i adaptada a l'usuari.
+            </p>
+          </div>
+        </motion.div>
 
-      {/* Pillars */}
-      <div className="grid sm:grid-cols-3 gap-6 mb-16">
-        {pillars.map((p, i) => (
-          <motion.div
-            key={p.title}
-            {...fadeUp}
-            transition={{ duration: 0.4, delay: i * 0.1 }}
-            className="flex gap-4 items-start"
+        {/* 3D Hand */}
+        <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.15 }}>
+          <Suspense
+            fallback={
+              <div className="w-full h-[400px] sm:h-[450px] rounded-xl bg-muted/30 border flex items-center justify-center">
+                <div className="text-sm text-muted-foreground animate-pulse">Carregant model 3D…</div>
+              </div>
+            }
           >
-            <div className="w-10 h-10 rounded-lg bg-primary/10 flex-shrink-0 flex items-center justify-center">
-              <p.icon className="w-5 h-5 text-primary" />
-            </div>
-            <div>
-              <h3 className="font-display font-semibold mb-1">{p.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-            </div>
-          </motion.div>
-        ))}
+            <RoboticHand3D />
+          </Suspense>
+        </motion.div>
       </div>
 
       {/* Tech cards */}
