@@ -33,12 +33,9 @@ const ContactSection = () => {
         <div className="max-w-xl mx-auto">
           <motion.div {...fadeUp} className="text-center mb-10">
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Contacte</p>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
-              Parlem?
+            <h2 className="font-display text-3xl sm:text-4xl font-bold">
+              Posa't en contacte
             </h2>
-            <p className="text-muted-foreground">
-              Si vols col·laborar, tens preguntes o simplement vols saber-ne més, escriu-nos.
-            </p>
           </motion.div>
 
           <motion.form
