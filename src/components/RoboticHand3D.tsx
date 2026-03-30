@@ -164,7 +164,7 @@ const Hand = () => {
 };
 
 const RoboticHand3D = () => (
-  <div className="w-full h-[400px] sm:h-[450px] rounded-xl overflow-hidden bg-muted/30 border">
+  <div className="w-full h-full min-h-[550px] sm:min-h-[600px]">
     <Canvas camera={{ position: [0, 0, 4], fov: 40 }}>
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
@@ -178,9 +178,6 @@ const RoboticHand3D = () => (
       />
       <Environment preset="studio" />
     </Canvas>
-    <p className="text-center text-xs text-muted-foreground pb-2 -mt-6 relative z-10">
-      Arrossega per rotar · La mà s'obre i tanca automàticament
-    </p>
   </div>
 );
 
