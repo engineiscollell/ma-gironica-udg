@@ -19,6 +19,10 @@ const coordinators: Member[] = [
   { name: "Joan Andreu Mayugo", role: "Professor coordinador", image: joanImg },
 ];
 
+const collaborators: Member[] = [
+  { name: "Carina", role: "Treballadora ONCE", image: carinaImg },
+];
+
 const team: Member[] = [
   { name: "Eira", role: "Enginyeria Electrònica" },
   { name: "Eloi", role: "Enginyeria Biomèdica" },
