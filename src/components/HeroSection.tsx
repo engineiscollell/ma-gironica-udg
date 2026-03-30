@@ -32,7 +32,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl">
-              Som un equip d'estudiants d'enginyeria de la Universitat de Girona desenvolupant un braç robòtic per a participar a la <em>"II COMPETICIÓN UNIVERSITARIA DE MANOS PROTÉSICAS"</em>.
+              Som un equip d'estudiants d'enginyeria de la Universitat de Girona desenvolupant un braç robòtic per a participar a la segona competició universitària de mans protèsiques.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-12">
