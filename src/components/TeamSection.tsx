@@ -4,6 +4,8 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import daniImg from "@/assets/dani.jpeg";
 import lluisImg from "@/assets/lluis.jpeg";
 import joanImg from "@/assets/joan.jpeg";
+import miquelImg from "@/assets/miquel.jpeg";
+import carinaImg from "@/assets/carina.jpeg";
 
 interface Member {
   name: string;
@@ -17,13 +19,17 @@ const coordinators: Member[] = [
   { name: "Joan Andreu Mayugo", role: "Professor coordinador", image: joanImg },
 ];
 
+const collaborators: Member[] = [
+  { name: "Carina", role: "Treballadora ONCE", image: carinaImg },
+];
+
 const team: Member[] = [
   { name: "Eira", role: "Enginyeria Electrònica" },
   { name: "Eloi", role: "Enginyeria Biomèdica" },
   { name: "Laia Moreno", role: "Enginyeria Mecànica" },
   { name: "Lluís Francesc Collell", role: "Enginyeria Biomèdica", image: lluisImg },
   { name: "Luis", role: "Enginyeria Industrial" },
-  { name: "Miquel Coll", role: "Enginyeria Informàtica" },
+  { name: "Miquel Coll", role: "Enginyeria Informàtica", image: miquelImg },
   { name: "Noa Pararol", role: "Enginyeria Mecànica" },
   { name: "Pau Grabulosa", role: "Enginyeria Industrial" },
   { name: "Pol Verdaguer", role: "Enginyeria Industrial" },
@@ -60,7 +66,7 @@ const TeamSection = () => (
   <section id="equip" className="py-28">
     <div className="container">
       <motion.div {...fadeUp} className="max-w-2xl mb-16">
-        <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">L'equip</p>
+        <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Integrants</p>
         <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">Qui som</h2>
         <p className="text-muted-foreground leading-relaxed">
           Un equip multidisciplinari d'estudiants d'enginyeria la Universitat de Girona, guiats per professors amb experiència en enginyeria i recerca.
@@ -78,11 +84,21 @@ const TeamSection = () => (
       </motion.div>
 
       {/* Equip */}
-      <motion.div {...fadeUp}>
+      <motion.div {...fadeUp} className="mb-14">
         <h3 className="font-display font-semibold text-lg mb-8 text-muted-foreground">Equip</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10">
           {team.map((m, i) => (
             <MemberCard key={m.name} member={m} delay={i * 0.03} />
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Col·laboradors */}
+      <motion.div {...fadeUp}>
+        <h3 className="font-display font-semibold text-lg mb-8 text-muted-foreground">Col·laboradors</h3>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-10">
+          {collaborators.map((m, i) => (
+            <MemberCard key={m.name} member={m} delay={i * 0.05} />
           ))}
         </div>
       </motion.div>
