@@ -36,6 +36,7 @@ const how = [
 
 const SponsorsSection = () => {
   const [current, setCurrent] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
 
   const next = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
   const prev = useCallback(() => setCurrent((c) => (c - 1 + slides.length) % slides.length), []);
