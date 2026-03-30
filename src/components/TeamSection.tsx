@@ -63,7 +63,7 @@ const TeamSection = () => (
         <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">L'equip</p>
         <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">Qui som</h2>
         <p className="text-muted-foreground leading-relaxed">
-          Un equip multidisciplinari d'estudiants de la Universitat de Girona, guiats per professors amb experiència en enginyeria i recerca.
+          Un equip multidisciplinari d'estudiants d'enginyeria la Universitat de Girona, guiats per professors amb experiència en enginyeria i recerca.
         </p>
       </motion.div>
 
