@@ -60,12 +60,6 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* Credibility line */}
-      <div className="border-b bg-muted/50">
-        <div className="container py-4 text-center text-sm text-muted-foreground">
-          Projecte desenvolupat a la Universitat de Girona amb la col·laboració de la ONCE
-        </div>
-      </div>
     </>
   );
 };

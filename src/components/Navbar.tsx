@@ -62,7 +62,7 @@ const Navbar = () => {
             </button>
           ))}
           <div className="px-6 pt-2">
-            <Button size="sm" className="w-full" onClick={() => scrollTo("#contacte")}>
+            <Button size="sm" className="w-full" onClick={() => scrollTo("#sponsors")}>
               Col·labora
             </Button>
           </div>

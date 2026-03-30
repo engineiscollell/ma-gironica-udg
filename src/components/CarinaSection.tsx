@@ -16,7 +16,7 @@ const CarinaSection = () => (
           <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
             <Heart className="w-6 h-6 text-primary" />
           </div>
-          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Per la Carina</p>
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Impacte Real</p>
           <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">
             Un projecte amb impacte real
           </h2>
