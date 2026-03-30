@@ -51,9 +51,11 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.5 }}
-            className="absolute bottom-0 right-4 sm:right-8 text-xs text-muted-foreground/70 max-w-[220px] text-right"
+            className="absolute bottom-0 right-4 sm:right-8 text-xs text-muted-foreground/70 text-right"
           >
-            Escola Politècnica Superior – Universitat de Girona, "On tot va nèixer"
+            Escola Politècnica Superior – Universitat de Girona
+            <br />
+            <span className="italic">"On tot va nèixer"</span>
           </motion.p>
         </div>
       </section>
