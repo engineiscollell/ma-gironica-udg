@@ -24,7 +24,7 @@ const collaborators: Member[] = [
 ];
 
 const team: Member[] = [
-  { name: "Eira", role: "Enginyeria Electrònica" },
+  { name: "Eira Membrive", role: "Enginyeria Electrònica" },
   { name: "Eloi", role: "Enginyeria Biomèdica" },
   { name: "Laia Moreno", role: "Enginyeria Mecànica" },
   { name: "Lluís Francesc Collell", role: "Enginyeria Biomèdica", image: lluisImg },
