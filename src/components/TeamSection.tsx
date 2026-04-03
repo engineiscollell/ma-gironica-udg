@@ -24,11 +24,11 @@ const collaborators: Member[] = [
 ];
 
 const team: Member[] = [
-  { name: "Eira", role: "Enginyeria Electrònica" },
-  { name: "Eloi", role: "Enginyeria Biomèdica" },
+  { name: "Eira Membrive", role: "Enginyeria Electrònica" },
+  { name: "Eloi Fernández", role: "Enginyeria Biomèdica" },
   { name: "Laia Moreno", role: "Enginyeria Mecànica" },
   { name: "Lluís Francesc Collell", role: "Enginyeria Biomèdica", image: lluisImg },
-  { name: "Luis", role: "Enginyeria Industrial" },
+  { name: "Luis Ramirez", role: "Enginyeria Industrial" },
   { name: "Miquel Coll", role: "Enginyeria Informàtica", image: miquelImg },
   { name: "Noa Pararol", role: "Enginyeria Mecànica" },
   { name: "Pau Grabulosa", role: "Enginyeria Industrial" },
