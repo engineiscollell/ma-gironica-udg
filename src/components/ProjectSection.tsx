@@ -55,7 +55,7 @@ const ProjectSection = () => (
             transition={{ duration: 0.5, delay: 0.1 }}
             className="space-y-6 max-w-2xl text-base sm:text-lg leading-[1.85] text-foreground/85"
           >
-            <p>
+            <p className="first-letter:text-2xl first-letter:font-display first-letter:font-bold first-letter:text-primary first-letter:mr-0.5">
               El desenvolupament d'un braç robòtic funcional requereix la integració coordinada de diverses disciplines d'enginyeria dins d'un únic sistema.
             </p>
             <p>
