@@ -5,6 +5,7 @@ import daniImg from "@/assets/dani.jpeg";
 import lluisImg from "@/assets/lluis.jpeg";
 import joanImg from "@/assets/joan.jpeg";
 import miquelImg from "@/assets/miquel.jpeg";
+import polImg from "@/assets/pol.jpeg";
 import carinaImg from "@/assets/carina.jpeg";
 
 interface Member {
