@@ -5,6 +5,7 @@ import daniImg from "@/assets/dani.jpeg";
 import lluisImg from "@/assets/lluis.jpeg";
 import joanImg from "@/assets/joan.jpeg";
 import miquelImg from "@/assets/miquel.jpeg";
+import polImg from "@/assets/pol.jpeg";
 import carinaImg from "@/assets/carina.jpeg";
 
 interface Member {
@@ -32,7 +33,7 @@ const team: Member[] = [
   { name: "Miquel Coll", role: "Enginyeria Informàtica", image: miquelImg },
   { name: "Noa Pararol", role: "Enginyeria Mecànica" },
   { name: "Pau Grabulosa", role: "Enginyeria Industrial" },
-  { name: "Pol Verdaguer", role: "Enginyeria Industrial" },
+  { name: "Pol Verdaguer", role: "Enginyeria Industrial", image: polImg },
   { name: "Sònia Carrasco", role: "Enginyeria Biomèdica" },
 ];
 
