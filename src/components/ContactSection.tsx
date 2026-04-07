@@ -1,10 +1,11 @@
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
-import { Mail, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -14,17 +15,41 @@ const fadeUp = {
 };
 
 const ContactSection = () => {
-  const { toast } = useToast();
   const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
-    setTimeout(() => {
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const name = (formData.get("name") as string)?.trim();
+    const email = (formData.get("email") as string)?.trim();
+    const message = (formData.get("message") as string)?.trim();
+
+    if (!name || !email || !message) {
+      toast.error("Si us plau, omple tots els camps.");
       setSending(false);
-      toast({ title: "Missatge enviat!", description: "Et respondrem el més aviat possible." });
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+      return;
+    }
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: { name, email, message },
+      });
+
+      if (error) throw error;
+
+      toast.success("Missatge enviat correctament!", {
+        description: "Et respondrem el més aviat possible.",
+      });
+      form.reset();
+    } catch (err) {
+      console.error("Error sending contact form:", err);
+      toast.error("Error enviant el missatge. Torna-ho a intentar.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
