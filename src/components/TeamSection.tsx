@@ -7,6 +7,7 @@ import joanImg from "@/assets/joan.jpeg";
 import miquelImg from "@/assets/miquel.jpeg";
 import polImg from "@/assets/pol.jpeg";
 import luisImg from "@/assets/luis.jpeg";
+import eiraImg from "@/assets/eira.jpeg";
 import carinaImg from "@/assets/carina.jpeg";
 
 interface Member {
@@ -26,7 +27,7 @@ const collaborators: Member[] = [
 ];
 
 const team: Member[] = [
-  { name: "Eira Membrive", role: "Enginyeria Electrònica" },
+  { name: "Eira Membrive", role: "Enginyeria Electrònica", image: eiraImg },
   { name: "Eloi Fernández", role: "Enginyeria Biomèdica" },
   { name: "Laia Moreno", role: "Enginyeria Mecànica" },
   { name: "Lluís Francesc Collell", role: "Enginyeria Biomèdica", image: lluisImg },
